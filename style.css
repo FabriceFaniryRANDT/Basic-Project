@@ -1,0 +1,142 @@
+*,::before,::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-size: 15pt;
+}
+
+h1{
+  height: 70px;
+  margin: 15px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  box-shadow: 0 0 0px gainsboro;
+}
+
+section{
+  padding-top: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  background-image: url('ac7026a2-a02d-446a-b985-48465cbc497e.jpeg');
+  background-position:  center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: scroll;
+}
+
+fieldset{
+  background-color: transparent;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  border: 0;
+  
+}
+
+aside{
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+span{
+  height: 40px;
+  margin: 1px;
+  padding: 10px;
+  background-color: ghostwhite;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 130px;
+}
+
+h4{
+  font-weight: 400;
+  font-size: 10pt;
+}
+
+div{
+  flex-grow: 1;
+  padding-right: 1px;
+  background-color: transparent;
+}
+
+#binary,#checkOut{
+  
+  margin-right: 10px;
+}
+
+#nb_Entrer{
+  outline: 0;
+  border: 0;
+  height: 40px;
+  margin: 1px;
+  width: 100%;
+  font-size: 20pt;
+  padding: 5px;
+  background-color: hsla(235, 0%, 100%, 0.2);
+  color: white;
+  border-bottom: 1px solid gainsboro;
+}
+h3{
+  height: 40px;
+  margin: 2px 0px;
+  margin-left: 1px;
+  display: flex;
+  justify-content: end;
+  padding-right: 8px;
+  align-items: center;
+  color: white;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  
+}
+
+hr{
+  width: 100%;
+  margin: 10px 0px;
+  
+}
+
+article{
+  background-color: transparent;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#aside_result{
+  pointer-events: none;
+}
+
+.bouton{
+  background-color: white;
+  height: 50px;
+  width: 110px;
+  border: 0;
+  font-size: 15pt;
+  color: black;
+  font-weight: 600;
+  box-shadow: 0 0 2px black;
+  outline: 0;
+  border-radius: 5px;
+}

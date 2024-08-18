@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulaire</title>
+ 
+  <style>
+    *,::before,::after{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    
+    body{
+    /*  background-image: linear-gradient(to left ,royalblue,pink);*/
+      background-color :whitesmoke;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px 0px;
+    }
+    form{
+      background-color: white;
+      width: 98%;
+      max-width: 600px;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 2px gainsboro;
+      color: #2228;
+      
+    }
+    section{
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 15px;
+    }
+    h2{
+      color: black;
+      font-size: 30pt;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .form-group{
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+    }
+    label{
+      font-size: 20pt;
+    }
+    input{
+      outline: 0;
+      border: 0;
+    }
+    #nombre{
+      width: 300px;
+      border: 1px solid #2221;
+      border-radius: 4px;
+      padding: 8px 13px;
+      font-size: 18pt;
+      color: #2228;
+    }
+    
+    #afficher{
+      margin-top: 20px;
+      background-color: whitesmoke;
+      height: 40px;
+      width: 300px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 18pt;
+      color: #1118;
+      box-shadow: 0 0 2px #2228;
+    }
+    hr{
+      width: 100%;
+      border: 1px solid #2222;
+      margin-bottom: 10px;
+    }
+    h3{
+      background-color: white;
+      margin: 5px 0px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 2px #2226;
+    }
+    #table_res{
+      background-color: transparent;
+      width: 300px;
+      padding: 8px;
+      margin: 2px;
+    }
+    aside{
+      background-color: ghostwhite;
+      border-radius: 5px;
+      display: flex;
+      overflow-y: scroll;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0px;
+      margin: 5px 0px;
+      border: 1px solid gainsboro;
+      box-shadow: 0px 0px 2px #2226 inset;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <section>
+        <h2>Table</h2>
+        <div class="form-group">
+          <label for="nombre">Entrer un nombre :</label>
+          <input placeholder="..." type="number" maxlength="4" id="nombre">
+        </div>
+        <div class="form-btn">
+          <input type="submit" id="afficher" value="Afficher" >
+        </div>
+    </section>
+    <hr>
+    <aside>
+      <div class="resultat">
+        <div id="table_res">
+          Aucun résultat 
+          
+        </div>
+        
+      </div>
+    </aside>
+  </form>
+  <script>
+    const afficher = document.getElementById('afficher')
+    const nombre = document.querySelector('#nombre')
+    let resultat = document.querySelector('.resultat')
+    let table_res = document.querySelector('#table_res')
+    
+    afficher.addEventListener('click', fonction_affiche)
+    
+    
+    function fonction_affiche(e){
+      e.preventDefault()
+      
+      table_res.innerHTML=''
+      
+      for(i=0;i<=10;i++){
+        let h3 = document.createElement('h3')
+        h3.innerHTML=`${nombre.value} x  ${i} = ${nombre.value*i}`
+        
+        table_res.append(h3)
+      }
+      resultat.append(table_res)
+    }
+    
+    
+  </script>
+</body>
+</html>
